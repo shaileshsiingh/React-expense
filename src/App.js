@@ -9,7 +9,11 @@ function App() {
       location : 'Bangaluru',
 
     },
-    { id: "e2", title: "New TV", amount: 799.49, date: new Date(2021, 2, 12), location : 'Pune',
+    { id: "e2",
+     title: "New TV",
+      amount: 799.49, 
+      date: new Date(2021, 2, 12), 
+      location : 'Pune',
   },
     {
       id: "e3",
@@ -25,6 +29,13 @@ function App() {
       amount: 450,
       date: new Date(2021, 5, 12),
       location : 'Mumbai',
+    },
+    {
+      id: "e5",
+      title: "Old Desk (Wooden)",
+      amount: 750,
+      date: new Date(2021, 8, 12),
+      location : 'Indore',
     },
   ];
 
