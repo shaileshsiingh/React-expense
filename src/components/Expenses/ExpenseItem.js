@@ -1,7 +1,7 @@
 import './ExpenseItem.css'
 import ExpenseDate from './ExpenseDate'
 import ExpenseDetails from './ExpenseDetails'
-import Card from '..UI/Card'
+import Card from '../UI/Card'
 
 function ExpenseItem(props) {
 // const locationOfExpenditure = 'Mumbai
