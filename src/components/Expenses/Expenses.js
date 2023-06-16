@@ -1,22 +1,23 @@
-import React from 'react'
-import ExpenseItem from './ExpenseItem'
-import './Expenses.css'
-import Card from '..UI/Card'
 
-function Expenses(props) {
+import React from 'react';
+
+import ExpenseItem from './ExpenseItem';
+import Card from '../UI/Card';
+import './Expenses.css';
+
+const Expenses = (props) => {
   return (
-    <Card classsname='expenses'> 
-        {props.expenses && props.expenses.map((expense) => (
-      <ExpenseItem
-      title={expense.title}
-          amount={expense.amount}
-          date={expense.date}
-          location={expense.location}
-          
+    <Card className="expenses">
+      {props.items.map((item)=>(
+        <ExpenseItem
+        title={item.title}
+        amount={item.amount}
+        date={item.date}
+        location={item.location}
       />
       ))}
     </Card>
-  )
+  );
 }
 
-export default Expenses
+export default Expenses;
