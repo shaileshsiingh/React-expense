@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import React from 'react'
+import ExpenseItem from './ExpenseItem'
+import './Expenses.css'
+import Card from '../UI/Card'
+>>>>>>> 8bea4961b7a279cf5cc936c3609bb4ee94ed0a5e
 
 import React from 'react';
 
@@ -20,4 +27,8 @@ const Expenses = (props) => {
   );
 }
 
+<<<<<<< HEAD
 export default Expenses;
+=======
+export default Expenses
+>>>>>>> 8bea4961b7a279cf5cc936c3609bb4ee94ed0a5e
