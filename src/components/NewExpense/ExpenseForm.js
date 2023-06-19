@@ -3,39 +3,53 @@ import React, {useState} from 'react';
 import './ExpenseForm.css';
 
 const ExpenseForm = () => {
-// const [enteredTitle, setEnteredTitle] = useState('')
-// const [enteredAmount, setEnteredAmount] = useState('')
-// const [enteredDate, setEnteredDate] = useState('')
-const [userInput, setUserInput] = useState({
-  enteredTitle : '',
-  enteredAmount : '',
-  eneterdDate :'',
-})
+const [enteredTitle, setEnteredTitle] = useState('')
+const [enteredAmount, setEnteredAmount] = useState('')
+const [enteredDate, setEnteredDate] = useState('')
+// const [userInput, setUserInput] = useState({
+//   enteredTitle : '',
+//   enteredAmount : '',
+//   eneterdDate :'',
+// })
 
 const titleHandler = (event) =>{
-  // setEnteredTitle(event.target.value)
-  setUserInput({
-    ...userInput,
-    enteredTitle:event.target.value
-  })
+  setEnteredTitle(event.target.value)
+  // setUserInput({
+  //   ...userInput,
+  //   enteredTitle:event.target.value
+  // })
 }
 
 const amountHandler = (event) =>{
-  // setEnteredAmount(event.target.value)
-  setUserInput({
-    ...userInput,
-    enteredAmount:event.target.value
-  })}
+  setEnteredAmount(event.target.value)
+  // setUserInput({
+  //   ...userInput,
+  //   enteredAmount:event.target.value
+  // })
+}
 
 const dateHandler = (event) =>{
-  // setEnteredDate(event.target.value)
-  setUserInput({
-    ...userInput,
-    enteredDate:event.target.value
-  })}
+  setEnteredDate(event.target.value)
+  // setUserInput({
+  //   ...userInput,
+  //   enteredDate:event.target.value
+  // })
+}
+
+  const submitHandler = (event) =>{
+event.preventDefault()
+  const ExpData = {
+   title : enteredTitle,
+   amount : enteredAmount,
+   date : enteredDate
+  }
+
+console.log(ExpData)
+
+  }
 
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className='new-expense__controls'>
         <div className='new-expense__control'>
           <label>Title</label>
@@ -55,6 +69,6 @@ const dateHandler = (event) =>{
       </div>
     </form>
   );
-};
+  }
 
 export default ExpenseForm;
